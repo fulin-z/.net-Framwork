@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFB52830-1D87-4219-96BD-5D2DF92E5076}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EMS</RootNamespace>
+    <AssemblyName>EMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase\DataCon.cs" />
+    <Compile Include="DataBase\DataOperate.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubForms\FormBuyBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormBuyBill.Designer.cs">
+      <DependentUpon>FormBuyBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormBuyStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormBuyStock.Designer.cs">
+      <DependentUpon>FormBuyStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormEmployee.Designer.cs">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormGoods.Designer.cs">
+      <DependentUpon>FormGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormLowerLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormLowerLimit.Designer.cs">
+      <DependentUpon>FormLowerLimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormRebuyBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormRebuyBill.Designer.cs">
+      <DependentUpon>FormRebuyBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormRebuyStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormRebuyStock.Designer.cs">
+      <DependentUpon>FormRebuyStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormResaleBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormResaleBill.Designer.cs">
+      <DependentUpon>FormResaleBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormResaleStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormResaleStock.Designer.cs">
+      <DependentUpon>FormResaleStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormSaleBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormSaleBill.Designer.cs">
+      <DependentUpon>FormSaleBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormSaleStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormSaleStock.Designer.cs">
+      <DependentUpon>FormSaleStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormSaleTrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormSaleTrade.Designer.cs">
+      <DependentUpon>FormSaleTrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormSelectStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormSelectStock.Designer.cs">
+      <DependentUpon>FormSelectStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormSetStockLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormSetStockLimit.Designer.cs">
+      <DependentUpon>FormSetStockLimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormStockStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormStockStatus.Designer.cs">
+      <DependentUpon>FormStockStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormTradeDealings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormTradeDealings.Designer.cs">
+      <DependentUpon>FormTradeDealings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormUnits.Designer.cs">
+      <DependentUpon>FormUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormUpperLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormUpperLimit.Designer.cs">
+      <DependentUpon>FormUpperLimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormUserPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormUserPwd.Designer.cs">
+      <DependentUpon>FormUserPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FormUserRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FormUserRight.Designer.cs">
+      <DependentUpon>FormUserRight.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SubForms\FormBuyBill.resx">
+      <DependentUpon>FormBuyBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormBuyStock.resx">
+      <DependentUpon>FormBuyStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormEmployee.resx">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormGoods.resx">
+      <DependentUpon>FormGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormLowerLimit.resx">
+      <DependentUpon>FormLowerLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormRebuyBill.resx">
+      <DependentUpon>FormRebuyBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormRebuyStock.resx">
+      <DependentUpon>FormRebuyStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormResaleBill.resx">
+      <DependentUpon>FormResaleBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormResaleStock.resx">
+      <DependentUpon>FormResaleStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormSaleBill.resx">
+      <DependentUpon>FormSaleBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormSaleStock.resx">
+      <DependentUpon>FormSaleStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormSaleTrade.resx">
+      <DependentUpon>FormSaleTrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormSelectStock.resx">
+      <DependentUpon>FormSelectStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormSetStockLimit.resx">
+      <DependentUpon>FormSetStockLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormStockStatus.resx">
+      <DependentUpon>FormStockStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormTradeDealings.resx">
+      <DependentUpon>FormTradeDealings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormUnits.resx">
+      <DependentUpon>FormUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormUpperLimit.resx">
+      <DependentUpon>FormUpperLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormUserPwd.resx">
+      <DependentUpon>FormUserPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FormUserRight.resx">
+      <DependentUpon>FormUserRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
